@@ -3,9 +3,10 @@ import ProductInterface from "../entity/product.interface";
 import { v4 as uuid } from "uuid";
 import ProductB from "../entity/product-b";
 
+export type ProductType = "a" | "b";
 export default class ProductFactory {
   public static create(
-    type: string,
+    type: ProductType,
     name: string,
     price: number
   ): ProductInterface {
